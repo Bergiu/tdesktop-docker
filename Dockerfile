@@ -104,3 +104,8 @@ RUN git clone https://chromium.googlesource.com/breakpad/breakpad &&\
 RUN git clone https://chromium.googlesource.com/external/gyp &&\
     cd gyp && git checkout -q 702ac58e47 &&\
     git apply ../../tdesktop/Telegram/Patches/gyp.diff
+
+# My Changes
+RUN apt-get install vim locate ctags
+RUN updatedb
+RUN cd /TBuild/tdesktop/Telegram/SourceFiles && ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .

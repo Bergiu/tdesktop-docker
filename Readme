@@ -31,3 +31,8 @@ To build on Linux:
 8) Inside the container:
     cd /TBuild/tdesktop/Telegram && gyp/refresh.sh && cd ../out/Debug && make -j4
 9) Executable will be available in tdesktop\Out\Debug
+
+
+QT_XKB_BUG:
+export QT_XKB_CONFIG_ROOT=/usr/share/X11/xkb
+
